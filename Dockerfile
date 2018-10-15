@@ -6,9 +6,9 @@ RUN set -x && \
     apt-get -qq update && \
     apt-get install -y wget && \
     apt-get install -y procps && \
-    wget -q -O /tmp/splunk-7.0.3-fa31da744b51-linux-2.6-amd64.deb 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=7.0.3&product=splunk&filename=splunk-7.0.3-fa31da744b51-linux-2.6-amd64.deb&wget=true' && \
-    dpkg -i /tmp/splunk-7.0.3-fa31da744b51-linux-2.6-amd64.deb && \
-    rm /tmp/splunk-7.0.3-fa31da744b51-linux-2.6-amd64.deb && \
+    wget -q -O /tmp/splunklight-7.1.2-a0c72a66db66-linux-2.6-amd64.deb 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=7.1.2&product=splunk_light&filename=splunklight-7.1.2-a0c72a66db66-linux-2.6-amd64.deb&wget=true' && \
+    dpkg -i /tmp/splunklight-7.1.2-a0c72a66db66-linux-2.6-amd64.deb && \
+    rm /tmp/splunklight-7.1.2-a0c72a66db66-linux-2.6-amd64.deb && \
     /bin/echo -e '\nOPTIMISTIC_ABOUT_FILE_LOCKING = 1' >> /opt/splunk/etc/splunk-launch.conf && \
     rm -rf /var/lib/apt/lists/*
 
